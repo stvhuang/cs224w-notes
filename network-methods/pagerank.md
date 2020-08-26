@@ -165,7 +165,7 @@ In case of a dead end: Teleport out with a total probability of 1. This will mak
 Putting this together, the PageRank equation (as proposed by [Brin-Page, 98](http://snap.stanford.edu/class/cs224w-readings/Brin98Anatomy.pdf)) can be written as:
 
 $$ 
-r_j = \sum_{i \rightarrow j} \frac{r_i}{d_i} + (1 - 𝜷) \frac{1}{N} 
+r_j = 𝜷 \sum_{i \rightarrow j} \frac{r_i}{d_i} + (1 - 𝜷) \frac{1}{N}
 $$
 
 We can now define the Google Matrix A and apply power iteration to solve for $$\textbf{r}$$ as before
